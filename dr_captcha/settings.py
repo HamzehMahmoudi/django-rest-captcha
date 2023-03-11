@@ -3,7 +3,7 @@ from django.conf import settings
 import os
 
 
-USER_SETTINGS = getattr(settings, 'REST_CAPTCHA', None)
+USER_SETTINGS = getattr(settings, 'dr_captcha', None)
 
 FONT_PATH = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), 'fonts/Vera.ttf')
@@ -11,7 +11,7 @@ FONT_PATH = os.path.join(
 DEFAULTS = {
     'CAPTCHA_CACHE': 'default',
     'CAPTCHA_TIMEOUT': 300,  # 5 minuts
-    'CAPTCHA_CACHE_KEY': 'rest_captcha_{key}.{version}',
+    'CAPTCHA_CACHE_KEY': 'dr_captcha_{key}.{version}',
     'CAPTCHA_KEY': 'captcha_key',
     'CAPTCHA_IMAGE': 'captcha_image',
     'CAPTCHA_LENGTH': 4,
@@ -21,8 +21,8 @@ DEFAULTS = {
     'CAPTCHA_LETTER_ROTATION': (-35, 35),
     'CAPTCHA_FOREGROUND_COLOR': '#001100',
     'CAPTCHA_BACKGROUND_COLOR': '#ffffff',
-    'FILTER_FUNCTION': 'rest_captcha.captcha.filter_default',
-    'NOISE_FUNCTION': 'rest_captcha.captcha.noise_default',
+    'FILTER_FUNCTION': 'dr_captcha.captcha.filter_default',
+    'NOISE_FUNCTION': 'dr_captcha.captcha.noise_default',
     # for tests access: MASTER_CAPTCHA: {'secret_key: secret_value'}
     'MASTER_CAPTCHA': {}
 }

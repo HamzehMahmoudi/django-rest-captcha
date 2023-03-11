@@ -3,9 +3,9 @@ include LICENSE
 include README.md
 include tox.ini
 include runtests.py
-include rest_captcha/captcha_py2.png
-include rest_captcha/captcha_py3.png
-recursive-include rest_captch/fonts *
+include dr_captcha/captcha_py2.png
+include dr_captcha/captcha_py3.png
+recursive-include dr_captcha/fonts *
 global-exclude *pyc
 global-exclude coverage.xml
 global-exclude .DS_Store

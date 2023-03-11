@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 settings.configure(
     INSTALLED_APPS=(
         'django.contrib.auth', 'django.contrib.contenttypes',
-        'rest_framework', 'rest_captcha', ),
+        'rest_framework', 'dr_captcha', ),
     DATABASES={
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -27,7 +27,7 @@ settings.configure(
             'rest_framework.authentication.BasicAuthentication'],
         'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny']
     },
-    ROOT_URLCONF='rest_captcha.urls',
+    ROOT_URLCONF='dr_captcha.urls',
     MIDDLEWARE_CLASSES=(),
 )
 
@@ -38,4 +38,4 @@ if __name__ == "__main__":
         pass
     else:
         apps.populate(settings.INSTALLED_APPS)
-    call_command('test', 'rest_captcha')
+    call_command('test', 'dr_captcha')

@@ -1,5 +1,5 @@
 import random
-from rest_captcha import VERSION
+from dr_captcha import VERSION
 from .settings import api_settings
 
 cache_template = api_settings.CAPTCHA_CACHE_KEY

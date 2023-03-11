@@ -13,7 +13,7 @@ Lightweight version of `django-simple-captcha` for work with `django-rest-framew
 ## Usage
 Add `RestCaptchaSerializer` to your protected request validator:
 ```
-from rest_captcha serializer import RestCaptchaSerializer
+from dr_captcha serializer import RestCaptchaSerializer
 class HumanOnlyDataSerializer(RestCaptchaSerializer):
     pass
 ```
@@ -46,13 +46,13 @@ Add to installed apps:
 ```
 INSTALLED_APPS = (
     ...
-    'rest_captcha',
+    'dr_captcha',
 )
 ```
 
-Set rest_captcha settings (if you want), see defaults:
+Set dr_captcha settings (if you want), see defaults:
 ```
-REST_CAPTCHA = {
+dr_captcha = {
     'CAPTCHA_CACHE': 'default',
     'CAPTCHA_TIMEOUT': 300,  # 5 minutes
     'CAPTCHA_LENGTH': 4,
@@ -62,9 +62,9 @@ REST_CAPTCHA = {
     'CAPTCHA_FOREGROUND_COLOR': '#001100',
     'CAPTCHA_BACKGROUND_COLOR': '#ffffff',
     'CAPTCHA_FONT_PATH': FONT_PATH,
-    'CAPTCHA_CACHE_KEY': 'rest_captcha_{key}.{version}',
-    'FILTER_FUNCTION': 'rest_captcha.captcha.filter_default',
-    'NOISE_FUNCTION': 'rest_captcha.captcha.noise_default'
+    'CAPTCHA_CACHE_KEY': 'dr_captcha_{key}.{version}',
+    'FILTER_FUNCTION': 'dr_captcha.captcha.filter_default',
+    'NOISE_FUNCTION': 'dr_captcha.captcha.noise_default'
 }
 ```
 
@@ -83,6 +83,6 @@ CACHES={
 ```
 urlpatterns = [
     ...
-    url(r'api/captcha/', include('rest_captcha.urls')),
+    url(r'api/captcha/', include('dr_captcha.urls')),
 ]
 ```
