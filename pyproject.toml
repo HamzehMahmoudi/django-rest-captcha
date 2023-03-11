@@ -1,9 +1,9 @@
 [tool.poetry]
-name = "django-rest-captcha"
+name = "drc"
 version = "0.2.0"
-description = "Lightweight version of django-simple-captcha for work with django-rest-framework"
+description = "fork from django-rest-captcha for work with django-rest-framework and support for new django versions"
 readme = "README.md"
-authors = ["evgeny.zuev <zueves@gmail.com>"]
+authors = ["evgeny.zuev <zueves@gmail.com>", "H10ODI <hamzehmahmoodi7@gmail.com>"]
 license = "MIT"
 packages = [
     {include = "rest_captcha"},
